@@ -27,4 +27,4 @@ def ellipticCurveSolver(x, mod_value, a, b, show):
         return value, value2
 
     else:
-        return -1, -1
+        return "there are no Y values because pow(big_Y, (mod_value - 1)//2, mod_value) did NOT equal 1"
