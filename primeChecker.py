@@ -1,10 +1,11 @@
 from random import randrange
-# Prime checker
 
+
+# Prime checker for ridiculously large primes
 def primeChecker(p):
     # choose a random number
     flag = False
-    for x in range(100) :
+    for x in range(100):
         a = randrange(p)
         test = pow(a, p, p)
         if test != a:
