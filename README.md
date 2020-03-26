@@ -6,7 +6,8 @@ you'll first be shown an input field, I recommend typing in `menu` to show the a
 ### `simple` from assignment 1 
 Calculates a simple linear congruence equation involving some modulus. can display all relevant information if you type simple show. __TODO__ does not currently work
 
-
+### `power` from assignment 2 take 2 question #5
+utilizes multiplicative inverse as well as phi to break down a complicated power congruence in the form of x^e = b (mod n)
 ### `prime check` from assignment 2 question #2
 calculates if a ridiculously large prime is likely. 
 There is no definitive test, but using this test of a^p (mod p) = a, you can definitively say if a number is NOT prime if a number raised to p then mod p `pow(a, p, p) != a` 

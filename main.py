@@ -1,6 +1,7 @@
 from ellipticCurve import ellipticCurveSolver
 from primeChecker import primeChecker
 from new_simple import *
+from power import powerCongruence
 
 
 def show_menu():
@@ -70,10 +71,16 @@ def main():
             num = int(input("b = "))
             mod_value = int(input("n = "))
             exponent = int(input("e = "))
+            powerCongruence(num, exponent, mod_value, False)
 
-            for x in range(1, mod_value):
-                if x ** exponent % mod_value == num:
-                    print(x)
+        if option == "power show":
+            print("x^e = b mod(n)")
+            num = int(input("b = "))
+            mod_value = int(input("n = "))
+            exponent = int(input("e = "))
+            answer = powerCongruence(num, exponent, mod_value, True)
+            print("x =", answer)
+
         if option == "ecadd":
             print("Y=y^2 = x^3 + ax + b ) mod p)")
             a = int(input("a = "))
