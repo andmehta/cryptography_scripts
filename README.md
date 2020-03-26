@@ -24,8 +24,8 @@ shows the step by step of
 2. outputting that (those) point
 
 ### TODO the rest of these
-- Prime version of Assign 2 #1
 - Fix Assign 2 #5 & add show
+- Add Jakes #6 to the menu and to the README
 ## Assignment 1 ##
 - [ ] Question 4: 
     ```
@@ -41,7 +41,7 @@ shows the step by step of
 ## Assignment 2 ##
 - [ ] Question 1
     ```
-
+        Simplify the following expressions (do not solve, just simplify the base and exponent) --> simplify
     ```
 - [ ] Question 2
     ```

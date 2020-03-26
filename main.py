@@ -1,6 +1,8 @@
 from ellipticCurve import ellipticCurveSolver
 from primeChecker import primeChecker
 from new_simple import *
+from simply_exp import *
+from numsix import *
 
 
 def show_menu():
@@ -11,19 +13,11 @@ def show_menu():
     print("\"elliptic\": to calculate an elliptic curve of style Y=y^2 = x^3 + ax + b (mod p)")
     print("\"prime check\": check if an extremely large integer is prime")
     print("\"new_simple\": problem like 13x+5= 15(mod 23)")
+    print("\"simplify\": 'Simplify the following expressions")
     print("\"menu\": to see all available options")
-    print("\"ecadd\"")
+    print("\"ecadd\": To calculate #P using the double-and-add algorithm")
+    print("\"order_num\": Find the possible orders of number in Zp")
     print("\"end\": to close program\n")
-
-
-# greatest common divisor
-def gcd(a, n, b):
-    x = 0
-    for x in range(1, n):
-        if a * x % n == b:
-            print("gcd = ", x)
-            return x
-
 
 def main():
     print("welcome to the Modulus Calculator")
@@ -34,7 +28,12 @@ def main():
     print("type \"menu\" to see all available options")
     while option != "end":
         option = input("\nWhat would you like to do?: ")
-
+        if option == "simplify":        
+            print("a^b (mod p)")
+            a = int(input("a = "))
+            b = int(input("b = "))
+            p = int(input("p = "))
+            simplify_base(a,b,p)
         if option == "simple":
             print("ax = b mod(n)")
             num = int(input("a = "))
@@ -46,6 +45,8 @@ def main():
                 if num * x % mod_value == num2:
                     print("solution = ", x)
 
+        if option == "order_num":
+            numbers_of_order_base()
         if option == "square":
             print("x^2 = b mod(n)")
             num = int(input("b = "))
