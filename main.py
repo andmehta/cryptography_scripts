@@ -5,6 +5,7 @@ from new_simple import *
 def show_menu():
     print("\"simple\": to calculate a simple linear congruence of style ax = b mod(n)")
     print("\"square\": to calculate a squared congruence of style x^2 = b mod(n)")
+    print("\"square show\": show how to calculate a squared congruence")
     print("\"power\": to calculate a powered congruence of style x^e = b mod(n)")
     print("\"elliptic\": to calculate an elliptic curve of style Y=y^2 = x^3 + ax + b (mod p)")
     print("\"prime check\": check if an extremely large integer is prime")
