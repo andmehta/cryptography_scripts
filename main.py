@@ -98,7 +98,16 @@ def main():
             mod_value = int(input("p = "))
             a = int(input("a = "))
             b = int(input("b = "))
-            values = ellipticCurveSolver(x, mod_value, a, b)
+            values = ellipticCurveSolver(x, mod_value, a, b, False)
+            print("y values are", values)
+
+        if option == "elliptic show":
+            print("Y=y^2 = x^3 + ax + b (mod p)")
+            x = int(input("x = "))
+            mod_value = int(input("p = "))
+            a = int(input("a = "))
+            b = int(input("b = "))
+            values = ellipticCurveSolver(x, mod_value, a, b, True)
             print("y values are", values)
 
         if option == "prime check":

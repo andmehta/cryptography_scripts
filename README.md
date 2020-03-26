@@ -18,6 +18,10 @@ Used for cases when you have (like Assign 2.2 #3)
 13x+5≡ 15  (mod 23)
 ```
 
+### `elliptic show` from assignment 2 take 2 question #1
+shows the step by step of 
+1. finding if a point exists on a given elliptic curve
+2. outputting that (those) point
 
 ### TODO the rest of these
 - Prime version of Assign 2 #1
