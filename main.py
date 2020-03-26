@@ -12,6 +12,7 @@ def show_menu():
     print("\"prime check\": check if an extremely large integer is prime")
     print("\"new_simple\": problem like 13x+5= 15(mod 23)")
     print("\"menu\": to see all available options")
+    print("\"ecadd\"")
     print("\"end\": to close program\n")
 
 
@@ -73,6 +74,23 @@ def main():
             for x in range(1, mod_value):
                 if x ** exponent % mod_value == num:
                     print(x)
+        if option == "ecadd":
+            print("Y=y^2 = x^3 + ax + b ) mod p)")
+            a = int(input("a = "))
+            b = int(input("b = "))
+            x = int(input("x = "))
+            p = int(input("p = "))
+            print("P = (x1, y1)")
+            x1 = int(input("x1 = "))
+            y1 = int(input("y1 = "))
+            print("P = (x2, y2)")
+            x2 = int(input("x2 = "))
+            y2 = int(input("y2 = "))
+            print("Calculate #P using...")
+            np = int(input("#P = "))
+            for x in range(1, np):
+                (x2,y2) = ecadd(p,a,x1,y1,x2,y2)
+                print(x+1,"P = (",x2,",",y2,")")
 
         if option == "elliptic":
             print("Y=y^2 = x^3 + ax + b (mod p)")
