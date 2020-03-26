@@ -10,9 +10,9 @@ def numbers_of_order_base():
 
 def pretty_print(A,Anum,B,Bnum,C,Cnum,calc):
     if int(calc) == 1:
-        print(A,"^",Anum,", ",B,"^",Bnum,", ",C,"^",Cnum," = ",calc," phi(",calc,") = ",phi(calc))
+        print(A,"^",Anum,", ",B,"^",Bnum,", ",C,"^",Cnum," = ",calc,"\tphi(",calc,") = ",phi(calc), sep='')
     else:
-        print(A,"^",Anum,", ",B,"^",Bnum,", ",C,"^",Cnum," = ",calc," phi(",calc,") = ",phi(calc), "elements of order ",calc)
+        print(A,"^",Anum,", ",B,"^",Bnum,", ",C,"^",Cnum," = ",calc,"\tphi(",calc,") = ",phi(calc), " elements of order ",calc, sep='')
 
 def numbers_of_order_three():
     
@@ -39,7 +39,7 @@ def numbers_of_order_three():
     pretty_print(A,1,B,0,C,1,(A**1 * B**0 * C**1))
     pretty_print(A,1,B,1,C,0,(A**1 * B**1 * C**0))
     pretty_print(A,1,B,1,C,1,(A**1 * B**1 * C**1))
-    print("The possible orders are ",(A**0 * B**0 * C**0),",",(A**0 * B**0 * C**1),",",(A**0 * B**1 * C**0),",",(A**0 * B**1 * C**1),",",(A**1 * B**0 * C**0),",",(A**1 * B**0 * C**1),",",(A**1 * B**1 * C**0),",",(A**1 * B**1 * C**1))
+    print("The possible orders are ",(A**0 * B**0 * C**0),",",(A**0 * B**0 * C**1),",",(A**0 * B**1 * C**0),",",(A**0 * B**1 * C**1),",",(A**1 * B**0 * C**0),",",(A**1 * B**0 * C**1),",",(A**1 * B**1 * C**0),",",(A**1 * B**1 * C**1), sep='')
     
     #printing the outcome of each round of multiplication/exponenation as well as printing the final answer, which is the max. 
 
@@ -48,9 +48,9 @@ def numbers_of_order_three():
         
 def pretty_print_two(A,Anum,B,Bnum,calc):
     if int(calc) == 1:
-        print(A,"^",Anum,", ",B,"^",Bnum," = ",calc," phi(",calc,") = ",phi(calc))
+        print(A,"^",Anum,", ",B,"^",Bnum," = ",calc,"\tphi(",calc,") = ",phi(calc), sep='')
     else:
-        print(A,"^",Anum,", ",B,"^",Bnum," = ",calc," phi(",calc,") = ",phi(calc), "elements of order ",calc)
+        print(A,"^",Anum,", ",B,"^",Bnum," = ",calc,"\tphi(",calc,") = ",phi(calc), "elements of order ",calc, sep='')
 
 def numbers_of_order_two():
     #  This is how to do it assuming two factors.
@@ -66,7 +66,7 @@ def numbers_of_order_two():
     pretty_print_two(A,0,B,1,(A**0 * B**1))
     pretty_print_two(A,1,B,0,(A**1 * B**0))
     pretty_print_two(A,1,B,1,(A**1 * B**1))
-    print("The possible orders are ",(A**0 * B**0),",",(A**0 * B**1),",",(A**1 * B**0),",",(A**1 * B**1))
+    print("The possible orders are ",(A**0 * B**0),",",(A**0 * B**1),",",(A**1 * B**0),",",(A**1 * B**1), sep='')
 
     print('The final answer is: ', max(ansList))
 

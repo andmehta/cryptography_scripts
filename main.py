@@ -8,8 +8,6 @@ from numsix import *
 
 def show_menu():
     print("\"simple\": to calculate a simple linear congruence of style ax = b mod(n)")
-    print("\"square\": to calculate a squared congruence of style x^2 = b mod(n)")
-    print("\"square show\": show how to calculate a squared congruence")
     print("\"power\": to calculate a powered congruence of style x^e = b mod(n)")
     print("\"elliptic\": to calculate an elliptic curve of style Y=y^2 = x^3 + ax + b (mod p)")
     print("\"prime check\": check if an extremely large integer is prime")
@@ -30,43 +28,33 @@ def main():
     print("type \"menu\" to see all available options")
     while option != "end":
         option = input("\nWhat would you like to do?: ")
+
         if option == "simplify":
             print("a^b (mod p)")
             a = int(input("a = "))
             b = int(input("b = "))
             p = int(input("p = "))
             simplify_base(a, b, p)
+
         if option == "simple":
             print("ax = b mod(n)")
             num = int(input("a = "))
             num2 = int(input("b = "))
             mod_value = int(input("n = "))
 
-            # solutions = gcd(num, mod_value, num2)
-            for x in range(1, mod_value):
-                if num * x % mod_value == num2:
-                    print("solution = ", x)
+            #fixed to use minv
+            mod_inv = minv(num, mod_value)
+            print("First find the modulus inverse of a")
+            print("modulus inverse of", num, "=", mod_inv)
+            solution = num2*mod_inv % mod_value
+            print("multiply the mod inverse on both sides")
+            print(mod_inv, "*", num, "=", mod_inv, "*", num2, "(mod", mod_value, ")")
+            print("therefore:", num2*mod_inv, "modulus", mod_value)
+            print("solution =", solution)
+
 
         if option == "order_num":
             numbers_of_order_base()
-        if option == "square":
-            print("x^2 = b mod(n)")
-            num = int(input("b = "))
-            mod_value = int(input("n = "))
-
-            for x in range(1, mod_value):
-                if x * x % mod_value == num:
-                    print(x)
-
-        if option == "square show":
-            print("x^2 = b mod(n)")
-            num = int(input("b = "))
-            mod_value = int(input("n = "))
-
-            for x in range(1, mod_value):
-                print(x, "*", x, "%", mod_value, "=", x * x % mod_value)
-                if x * x % mod_value == num:
-                    print("the answer includes", x)
 
         if option == "power":
             print("x^e = b mod(n)")
@@ -84,7 +72,7 @@ def main():
             print("x =", answer)
 
         if option == "ecadd":
-            print("Y=y^2 = x^3 + ax + b ) mod p)")
+            print("Y=y^2 = x^3 + ax + b  (mod p)")
             a = int(input("a = "))
             b = int(input("b = "))
             x = int(input("x = "))
@@ -92,6 +80,7 @@ def main():
             print("P = (x1, y1)")
             x1 = int(input("x1 = "))
             y1 = int(input("y1 = "))
+            print("REMEMBER: If using double and add, type in the same point as (x1, y1)")
             print("P = (x2, y2)")
             x2 = int(input("x2 = "))
             y2 = int(input("y2 = "))
@@ -99,7 +88,7 @@ def main():
             np = int(input("#P = "))
             for x in range(1, np):
                 (x2, y2) = ecadd(p, a, x1, y1, x2, y2)
-                print(x + 1, "P = (", x2, ",", y2, ")")
+                print(x + 1, "P = (", x2, ",", y2, ")", sep='')
 
         if option == "elliptic":
             print("Y=y^2 = x^3 + ax + b (mod p)")
