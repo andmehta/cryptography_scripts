@@ -1,6 +1,7 @@
 from ellipticCurve import ellipticCurveSolver
 from primeChecker import primeChecker
 
+
 def show_menu():
     print("\"simple\": to calculate a simple linear congruence of style ax = b mod(n)")
     print("\"square\": to calculate a squared congruence of style x^2 = b mod(n)")
@@ -15,7 +16,7 @@ def show_menu():
 def gcd(a, n, b):
     x = 0
     for x in range(1, n):
-        if a*x % n == b:
+        if a * x % n == b:
             print("gcd = ", x)
             return x
 
@@ -38,7 +39,7 @@ def main():
 
             # solutions = gcd(num, mod_value, num2)
             for x in range(1, mod_value):
-                if num*x % mod_value == num2:
+                if num * x % mod_value == num2:
                     print("solution = ", x)
 
         if option == "square":
@@ -47,7 +48,7 @@ def main():
             mod_value = int(input("n = "))
 
             for x in range(1, mod_value):
-                if x*x % mod_value == num:
+                if x * x % mod_value == num:
                     print(x)
 
         if option == "square show":
@@ -56,8 +57,8 @@ def main():
             mod_value = int(input("n = "))
 
             for x in range(1, mod_value):
-                print(x, "*", x, "%", mod_value, "=", x*x % mod_value)
-                if x*x % mod_value == num:
+                print(x, "*", x, "%", mod_value, "=", x * x % mod_value)
+                if x * x % mod_value == num:
                     print("the answer includes", x)
 
         if option == "power":
@@ -67,7 +68,7 @@ def main():
             exponent = int(input("e = "))
 
             for x in range(1, mod_value):
-                if x**exponent % mod_value == num:
+                if x ** exponent % mod_value == num:
                     print(x)
 
         if option == "elliptic":
