@@ -1,8 +1,12 @@
+from ellipticCurve import ellipticCurveSolver
+from primeChecker import primeChecker
 
 def show_menu():
-    print("\"square\": to calculate a squared congruence")
-    print("\"power\": to calculate a powered congruence")
-    print("\"simple\": to calculate a simple linear congruence")
+    print("\"simple\": to calculate a simple linear congruence of style ax = b mod(n)")
+    print("\"square\": to calculate a squared congruence of style x^2 = b mod(n)")
+    print("\"power\": to calculate a powered congruence of style x^e = b mod(n)")
+    print("\"elliptic\": to calculate an elliptic curve of style Y=y^2 = x^3 + ax + b (mod p)")
+    print("\"prime check\": check if an extremely large integer is prime")
     print("\"menu\": to see all available options")
     print("\"end\": to close program\n")
 
@@ -26,48 +30,62 @@ def main():
     while option != "end":
         option = input("\nWhat would you like to do?: ")
 
-        if option == "menu":
-            show_menu()
-
         if option == "simple":
             print("ax = b mod(n)")
             num = int(input("a = "))
             num2 = int(input("b = "))
-            modvalue = int(input("n = "))
+            mod_value = int(input("n = "))
 
-            # solutions = gcd(num, modvalue, num2)
-            for x in range(1, modvalue):
-                if num*x % modvalue == num2:
+            # solutions = gcd(num, mod_value, num2)
+            for x in range(1, mod_value):
+                if num*x % mod_value == num2:
                     print("solution = ", x)
 
         if option == "square":
             print("x^2 = b mod(n)")
             num = int(input("b = "))
-            modvalue = int(input("n = "))
+            mod_value = int(input("n = "))
 
-            for x in range(1, modvalue):
-                if x*x % modvalue == num:
+            for x in range(1, mod_value):
+                if x*x % mod_value == num:
                     print(x)
+
+        if option == "square show":
+            print("x^2 = b mod(n)")
+            num = int(input("b = "))
+            mod_value = int(input("n = "))
+
+            for x in range(1, mod_value):
+                print(x, "*", x, "%", mod_value, "=", x*x % mod_value)
+                if x*x % mod_value == num:
+                    print("the answer includes", x)
 
         if option == "power":
             print("x^e = b mod(n)")
             num = int(input("b = "))
-            modvalue = int(input("n = "))
+            mod_value = int(input("n = "))
             exponent = int(input("e = "))
 
-            for x in range(1, modvalue):
-                if x**exponent % modvalue == num:
+            for x in range(1, mod_value):
+                if x**exponent % mod_value == num:
                     print(x)
-                    
-        if option == "show_square":
-            print("x^2 = b mod(n)")
-            num = int(input("b = "))
-            modvalue = int(input("n = "))
 
-            for x in range(1, modvalue):
-                print(x, "*", x, "%", modvalue, "=", x*x % modvalue)
-                if x*x % modvalue == num:
-                    print("the answer includes", x)
+        if option == "elliptic":
+            print("Y=y^2 = x^3 + ax + b (mod p)")
+            x = int(input("x = "))
+            mod_value = int(input("p = "))
+            a = int(input("a = "))
+            b = int(input("b = "))
+            values = ellipticCurveSolver(x, mod_value, a, b)
+            print("y values are", values)
+
+        if option == "prime check":
+            prime = int(input("prime = "))
+            isPrime = primeChecker(prime)
+
+            print(isPrime)
+        if option == "menu":
+            show_menu()
 
 
 if __name__ == "__main__":
