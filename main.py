@@ -4,7 +4,6 @@ from new_simple import *
 from simply_exp import *
 from numsix import *
 
-
 def show_menu():
     print("\"simple\": to calculate a simple linear congruence of style ax = b mod(n)")
     print("\"square\": to calculate a squared congruence of style x^2 = b mod(n)")
