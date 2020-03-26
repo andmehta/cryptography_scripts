@@ -19,16 +19,14 @@ Used for cases when you have (like Assign 2.2 #3)
 13x+5≡ 15  (mod 23)
 ```
 
-### 'elliptic show' from assignment 2 take 2 question #1
+### `elliptic show` from assignment 2 take 2 question #1
 shows the step by step of 
 1. finding if a point exists on a given elliptic curve
 2. outputting that (those) point
 
 ### TODO the rest of these
-- Add way to solve Assignment questions
-- Prime version of Assign 2 #1
-- Add ecadd
 - Fix Assign 2 #5 & add show
+- Add Jakes #6 to the menu and to the README
 ## Assignment 1 ##
 - [ ] Question 4: 
     ```
@@ -44,7 +42,7 @@ shows the step by step of
 ## Assignment 2 ##
 - [ ] Question 1
     ```
-
+        Simplify the following expressions (do not solve, just simplify the base and exponent) --> simplify
     ```
 - [ ] Question 2
     ```
