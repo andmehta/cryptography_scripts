@@ -1,5 +1,6 @@
 from ellipticCurve import ellipticCurveSolver
 from primeChecker import primeChecker
+from new_simple import *
 
 
 def show_menu():
@@ -8,6 +9,7 @@ def show_menu():
     print("\"power\": to calculate a powered congruence of style x^e = b mod(n)")
     print("\"elliptic\": to calculate an elliptic curve of style Y=y^2 = x^3 + ax + b (mod p)")
     print("\"prime check\": check if an extremely large integer is prime")
+    print("\"new_simple\": problem like 13x+5= 15(mod 23)")
     print("\"menu\": to see all available options")
     print("\"end\": to close program\n")
 
@@ -87,6 +89,12 @@ def main():
             print(isPrime)
         if option == "menu":
             show_menu()
+        if option == "new_simple":
+            print("ax = b mod(n)")
+            numa = int(input("a = "))
+            numb = int(input("b = "))
+            numn = int(input("n = "))
+            new_simple(numa,numb,numn)
 
 
 if __name__ == "__main__":
