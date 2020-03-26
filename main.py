@@ -72,7 +72,7 @@ def main():
             print("x =", answer)
 
         if option == "ecadd":
-            print("Y=y^2 = x^3 + ax + b ) mod p)")
+            print("Y=y^2 = x^3 + ax + b  (mod p)")
             a = int(input("a = "))
             b = int(input("b = "))
             x = int(input("x = "))
@@ -80,6 +80,7 @@ def main():
             print("P = (x1, y1)")
             x1 = int(input("x1 = "))
             y1 = int(input("y1 = "))
+            print("REMEMBER: If using double and add, type in the same point as (x1, y1)")
             print("P = (x2, y2)")
             x2 = int(input("x2 = "))
             y2 = int(input("y2 = "))
@@ -87,7 +88,7 @@ def main():
             np = int(input("#P = "))
             for x in range(1, np):
                 (x2, y2) = ecadd(p, a, x1, y1, x2, y2)
-                print(x + 1, "P = (", x2, ",", y2, ")")
+                print(x + 1, "P = (", x2, ",", y2, ")", sep='')
 
         if option == "elliptic":
             print("Y=y^2 = x^3 + ax + b (mod p)")

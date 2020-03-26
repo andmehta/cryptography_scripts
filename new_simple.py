@@ -15,7 +15,7 @@ def minv(a, m):
 
 
 def ecadd(p, a, x1, y1, x2, y2):
-    print("ecadd(", p, ",", a, ",", x1, ",", y1, ",", x2, ",", y2, ")")
+    print("ecadd(", p, ",", a, ",", x1, ",", y1, ",", x2, ",", y2, ")", sep='')
     if x2 != x1:
         s = ((y2 - y1) * minv((x2 - x1), p)) % p
     elif (x2 == x1) and (y2 == y1):
