@@ -21,7 +21,7 @@ def phi(n):
 def powerCongruence(b, power, mod_value, show):
     new_mod = phi(mod_value)
     if show:
-        print("first phi() the mod value: phi(", mod_value, ") =", phi(mod_value))
+        print("first phi() the mod value: phi(", mod_value, ") = ", phi(mod_value), sep='')
 
     # find multiplicative inverse
     multi_inv = minv(power, new_mod)
@@ -30,15 +30,17 @@ def powerCongruence(b, power, mod_value, show):
 
     # raise both sides to this multiplicative inverse
     if show:
-        print("raise both sides to the multiplicative inverse: x^(", power, ")*", multi_inv, "=", b, "^", multi_inv,
-              "(mod", mod_value, ")")
+        print("raise both sides to the multiplicative inverse: x^(", power, "*", multi_inv, ") = ", b, "^", multi_inv,
+              " (mod ", mod_value, ")", sep='')
         print("recall x^y = x mod(n) IF y=1 mod phi(n)")
-        print("As", power, "*", multi_inv, "= 1 mod(", new_mod, "), so too must x^(", power, "*", multi_inv,
-              ") = x (mod", mod_value, ")")
-        print("Therefore x =", b, "^", multi_inv, "(mod", mod_value, ")")
+        print("As ", power, "*", multi_inv, " = 1 (mod ", new_mod, "), so too must x^(", power, "*", multi_inv,
+              ") = x (mod ", mod_value, ")", sep='')
+        print("Therefore x = ", b, "^", multi_inv, " (mod ", mod_value, ")", sep='')
 
     # solve using pow function
     answer = pow(b, multi_inv, mod_value)
 
     return answer
 
+
+powerCongruence(5, 13, 1763, True)
