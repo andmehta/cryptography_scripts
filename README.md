@@ -20,3 +20,17 @@ Used for cases when you have (like Assign 2.2 #3)
 
 
 ### TODO the rest of these
+- Add way to solve Assignment questions
+## Assignment 1 ##
+- [ ] Question 4: 
+    ```
+    show_simple
+    ```
+    ```
+    simple
+    ```
+- [ ] Question 5:
+    ```
+    show_square
+    ```
+## Assignment 2 ##
