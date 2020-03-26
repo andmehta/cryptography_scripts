@@ -48,8 +48,8 @@ def main():
             print("modulus inverse of", num, "=", mod_inv)
             solution = num2*mod_inv % mod_value
             print("multiply the mod inverse on both sides")
-            print(mod_inv, "*", num, "=", mod_inv, "*", num2, "(mod", mod_value, ")")
-            print("therefore:", num2*mod_inv, "modulus", mod_value)
+            print(mod_inv, "*", num, " = ", mod_inv, "*", num2, " (mod ", mod_value, ")", sep='')
+            print("therefore: ", num2*mod_inv, " (mod ", mod_value, ")", sep='')
             print("solution =", solution)
 
 

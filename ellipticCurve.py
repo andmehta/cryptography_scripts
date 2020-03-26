@@ -11,12 +11,14 @@ def ellipticCurveSolver(x, mod_value, a, b, show):
     # Raise big_Y to power (p-1)/2
     if show:
         print("Raise big_Y to power (p-1)/2\twhere p =", mod_value)
-        print(mod_value, "^((", mod_value, "-1)/2) (mod", mod_value, ") =", pow(big_Y, (mod_value - 1)//2, mod_value))
+        print(mod_value, "^((", mod_value, "-1)/2) (mod ", mod_value, ") = ",
+              pow(big_Y, (mod_value - 1)//2, mod_value), sep='')
     if pow(big_Y, (mod_value - 1)//2, mod_value) == 1:
         # There must be a square root in that modulus
         if show:
             print("since that value was 1, there MUST be a square root so now raise big_Y to (p+1)/4")
-            print(big_Y, "^((", mod_value, "+1)/4) (mod", mod_value, ") =", pow(big_Y, (mod_value + 1)//4, mod_value))
+            print(big_Y, "^((", mod_value, "+1)/4) (mod ", mod_value, ") = ",
+                  pow(big_Y, (mod_value + 1)//4, mod_value), sep='')
         value = pow(big_Y, (mod_value + 1)//4, mod_value)
         if show:
             print("value =", pow(big_Y, (mod_value + 1)//4, mod_value))
@@ -28,3 +30,6 @@ def ellipticCurveSolver(x, mod_value, a, b, show):
 
     else:
         return "there are no Y values because pow(big_Y, (mod_value - 1)//2, mod_value) did NOT equal 1"
+
+
+ellipticCurveSolver(3, 107, 1, 3, True)
