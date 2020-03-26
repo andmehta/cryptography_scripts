@@ -20,10 +20,7 @@ Used for cases when you have (like Assign 2.2 #3)
 
 
 ### TODO the rest of these
-- Add way to solve Assignment questions
-<<<<<<< HEAD
 - Prime version of Assign 2 #1
-- Add ecadd
 - Fix Assign 2 #5 & add show
 ## Assignment 1 ##
 - [ ] Question 4: 
