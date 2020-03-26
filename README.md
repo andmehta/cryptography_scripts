@@ -67,9 +67,9 @@ shows the step by step of
     ```
 - [ ] Question 5
     ```
-        Solve x^13= 5(mod 1763) -->power show || power
+        Solve x^13= 5(mod 1763) -->power show 
     ```
 - [ ] Question 6
     ```
-
+        Find the possible orders of number in Zp -> order_num
     ```
