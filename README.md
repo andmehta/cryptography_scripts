@@ -30,14 +30,11 @@ shows the step by step of
 ## Assignment 1 ##
 - [ ] Question 4: 
     ```
-    4x = 7 (mod 19) --> show_simple
-    ```
-    ```
     4x = 7 (mod 19) --> simple
     ```
 - [ ] Question 5:
     ```
-    x^2 = 7 (mod 19) --> show_square
+    x^2 = 7 (mod 19) --> power show || power 
     ```
 ## Assignment 2 ##
 - [ ] Question 1
@@ -51,7 +48,7 @@ shows the step by step of
 ## Assignment 2.2 ##
 - [ ] Question 1
     ```
-        Is there a point on the elliptic curve... at x = # --> show elliptic
+        Is there a point on the elliptic curve... at x = # --> elliptic show || elliptic
     ```
 - [ ] Question 2
     ```
@@ -63,11 +60,11 @@ shows the step by step of
     ```
 - [ ] Question 4
     ```
-        Solve x^2 = 9 (mod 17) --> square show
+        Solve x^2 = 9 (mod 17) --> power show || power
     ```
 - [ ] Question 5
     ```
-        Solve x^13= 5(mod 1763) -->power show 
+        Solve x^13= 5(mod 1763) -->power show || power
     ```
 - [ ] Question 6
     ```
