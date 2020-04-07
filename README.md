@@ -24,9 +24,6 @@ shows the step by step of
 1. finding if a point exists on a given elliptic curve
 2. outputting that (those) point
 
-### TODO the rest of these
-- Fix Assign 2 #5 & add show
-- Add Jakes #6 to the menu and to the README
 ## Assignment 1 ##
 - [ ] Question 4: 
     ```
