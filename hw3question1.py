@@ -100,7 +100,7 @@ def test_full_program():
     assert big_P == part_3_2(big_C_test, big_X, alpha, k, p) and r == 59 and S == 41
 
 
-# question 1 using
+# question 1 using El Gamal authentication and encryption
 def main():
     ## part 1
     a = int(input("what is the private key (a)? "))
