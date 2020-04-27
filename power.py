@@ -1,21 +1,6 @@
 # finding a variable to a specific power using phi and multiplicative inverse for a congruence equation
 from new_simple import minv
-
-
-def gcd(a, b):
-    if a == 0:
-        return b
-    return gcd(b % a, a)
-
-
-# A simple method to evaluate
-# Euler Totient Function
-def phi(n):
-    result = 1
-    for i in range(2, n):
-        if gcd(i, n) == 1:
-            result += 1
-    return result
+from phi import phi
 
 
 def powerCongruence(b, power, mod_value, show):
@@ -41,6 +26,3 @@ def powerCongruence(b, power, mod_value, show):
     answer = pow(b, multi_inv, mod_value)
 
     return answer
-
-
-powerCongruence(5, 13, 1763, True)
